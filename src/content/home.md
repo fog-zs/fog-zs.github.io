@@ -1,6 +1,6 @@
 # fog
 
-## 夢は可愛い異世界で生活することです！
+## 夢は可愛いファンタジーの異世界で生活することです！
 夢想是做一個線上遊戲，和全世界的人玩得開心！
 
 My dream is to create an MMO game and play it with people all over the world.
@@ -9,12 +9,12 @@ My dream is to create an MMO game and play it with people all over the world.
 
 ## 制作してきたゲーム
 
-https://tc.tik-choco.com/
+[https://tc.tik-choco.com/](https://tc.tik-choco.com/)
 
 ## 所属
 
 - 2022年～2024年 
-大分大学大学院　工学研究科　博士前期課程　工学専攻　知能情報システム工学コース xReality・知的解析研究室
+大分大学大学院　工学研究科　博士後期課程　工学専攻　知能情報システム工学コース xReality・知的解析研究室
 
 ## 研究
 分散型メタバースに関する研究を行っています
@@ -30,15 +30,15 @@ Fogverse 完全分散型メタバースの実現を目指すProject
 ### TikChoco
 アニメ調の異世界で生活するための環境を作るProject
 
-https://github.com/tik-choco
+[https://github.com/tik-choco](https://github.com/tik-choco)
 
 
 ### ゲーム開發集會
 隔週日曜日 21:00～開催
 
-https://github.com/metaverse-gdm
+[https://github.com/metaverse-gdm](https://github.com/metaverse-gdm)
 
 ### メタバース研究会Futuria
-https://github.com/oita-metaverse
+[https://github.com/oita-metaverse](https://github.com/oita-metaverse)
 
 ---

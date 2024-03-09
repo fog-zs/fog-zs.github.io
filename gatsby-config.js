@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `portfolio`,
   },
-  pathPrefix: '__GATSBY_IPFS_PATH_PREFIX__',
+  pathPrefix: '/',
   plugins: [    
     {
       resolve: 'gatsby-plugin-mdx',
