@@ -58,4 +58,22 @@ export const darkTheme = createTheme({
     mode: 'dark',
     // その他のダークモード特有の設定...
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+        body {
+          background-color: #121212; // ダークモードの背景色
+          color: #ffffff; // ダークモードのテキスト色
+        }
+        a {
+          color: #90caf9; // ダークモードでのリンクの色
+          text-decoration: none; // リンクの下線を消す
+        }
+        a:hover {
+          color: #ffffff; // ホバー時のリンクの色
+          text-decoration: underline; // ホバー時に下線をつける
+        }
+      `,
+    },
+  },
 });
