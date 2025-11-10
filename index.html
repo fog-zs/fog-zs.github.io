@@ -11,6 +11,19 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <div class="top-controls">
+    <div class="lang-switch">
+      <button id="langToggle" class="lang-pill" aria-haspopup="listbox" aria-expanded="false" title="言語" aria-label="言語">
+        <span class="lang-icon" aria-hidden="true">🌐</span>
+        <span id="langCurrent">English</span>
+      </button>
+      <div id="langMenu" class="lang-menu" role="listbox">
+        <button type="button" data-lang-option="en">English</button>
+        <button type="button" data-lang-option="zh">中文</button>
+        <button type="button" data-lang-option="ja">日本語</button>
+      </div>
+    </div>
+  </div>
   <button id="themeToggle" class="fab" aria-label="テーマ切替" title="テーマ切替">🌓</button>
   <nav class="socials">
     <a class="fab" href="https://github.com/fog-zs/" aria-label="GitHub" target="_blank" rel="noopener noreferrer" title="GitHub">
@@ -30,77 +43,31 @@
 
   <main class="container">
     <article class="content">
-      <h1>fog/曉霧</h1>
+      <h1 data-i18n="siteTitle">fog/曉霧</h1>
 
-      <h2>夢</h2>
-      <p>可愛いファンタジーの異世界で生活すること！</p>
-      <p>夢想是做一個線上遊戲，和全世界的人玩得開心！</p>
-      <p>My dream is to create an MMO game and play it with people all over the world.</p>
+      <h2 data-i18n="about">夢</h2>
+      <div id="about"></div>
 
-      <h2>やっていること</h2>
-      <p><a href="https://tik-choco.github.io/tc-website/" target="_blank" rel="noopener">アニメ調の異世界で生活する環境の開発</a></p>
-      <p><a href="https://github.com/tik-choco-lab/" target="_blank" rel="noopener">完全分散型メタバースの開発</a></p>
+      <h2 data-i18n="projects">やっていること</h2>
+      <ul id="projects"></ul>
       <p><img src="static/fog.png" alt="fog" style="width:30%;max-width:260px;height:auto"></p>
 
-      <h2>所属</h2>
-      <ul>
-        <li>大分大学大学院 工学研究科 博士後期課程 工学専攻 環境工学コース</li>
-        <li><a href="https://github.com/tik-choco" target="_blank" rel="noopener">TikChoco</a></li>
-        <li><a href="https://csiski2lab.github.io/#/ja" target="_blank" rel="noopener">xReality・知的解析研究室</a></li>
-        <li><a href="https://www.ipsj.or.jp/" target="_blank" rel="noopener">情報処理学会</a></li>
-        <li><a href="https://ipsjdps.org/" target="_blank" rel="noopener">マルチメディア通信と分散処理研究会</a></li>
-        <li><a href="https://github.com/metaverse-gdm" target="_blank" rel="noopener">ゲーム開発集会</a></li>
-      </ul>
+      <h2 data-i18n="affiliations">所属</h2>
+      <ul id="affiliations"></ul>
 
-      <h2>発表</h2>
-      <h3>国際会議</h3>
-      <ul>
-        <li>
-          Y. Tanaka, et al,
-          <a href="https://doi.org/10.1109/ICCE-Taiwan62264.2024.10674530" target="_blank" rel="noopener">
-            MistNet: A Decentralized Network Library for Sustainable Metaverse Infrastructure
-          </a>
-          International Conference on Consumer Electronics-Taiwan (ICCE-Taiwan), 2024 [ポスター, 査読有り]
-        </li>
-        <li>
-          Y. Tanaka, et al,
-          <a href="https://doi.org/10.1109/ICCE-Taiwan58799.2023.10226934" target="_blank" rel="noopener">
-            Scalable Interconnection between Distributed Metaverse and Physical World
-          </a>
-          International Conference on Consumer Electronics-Taiwan (ICCE-Taiwan), 2023 [口頭, 査読有り]
-        </li>
-      </ul>
-      <h3>国内学会</h3>
-      <ul>
-        <li>
-          田中勇気, et al,
-          <a href="https://www.jstage.jst.go.jp/article/vconf/2022/0/2022_101/_pdf/-char/ja" target="_blank" rel="noopener">
-            分散型メタバースのためのユーザー座標に基づいたピュア型P2Pの接続最適化
-          </a>,
-          バーチャル学会, 2022 [ポスター, 査読無し]
-        </li>
-        <li>
-          田中勇気, et al,
-          <a href="https://www.jstage.jst.go.jp/article/jceeek/2023/0/2023_54/_pdf/-char/ja" target="_blank" rel="noopener">
-            分散型メタバースにおけるピュア型P2Pでの効率化座標同期アリゴリズムの実装と検証
-          </a>,
-          電気・情報関係学会九州支部連合大会, 2023 [口頭, 査読無し]
-        </li>
-      </ul>
-
-      <h3>開発したゲーム</h3>
-      <p><a href="https://tc.tik-choco.com/" target="_blank" rel="noopener">https://tc.tik-choco.com/</a></p>
+      <h2 data-i18n="publications">発表</h2>
+      <h3 data-i18n="pubInternational">国際会議</h3>
+      <ul id="pub-international"></ul>
+      <h3 data-i18n="pubDomestic">国内学会</h3>
+      <ul id="pub-domestic"></ul>
 
       <footer class="footer">
-        <small>© <span id="year"></span> fog</small>
+        <small>© <span id="year"></span> <span data-i18n="brand">fog</span></small>
       </footer>
     </article>
   </main>
 
   <script src="./script.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
 
