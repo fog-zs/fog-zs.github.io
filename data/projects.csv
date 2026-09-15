@@ -1,5 +1,4 @@
-name,url,description
-アニメ調の異世界で生活する環境の開発,https://tik-choco.github.io/tc-website/,
-完全分散型メタバースの開発,https://github.com/tik-choco-lab/,
-開発したゲーム,https://tc.tik-choco.com/,
-
+"name","url","description"
+"mistlib","https://github.com/tik-choco-lab/mistlib","仮想空間の参加者同士が、近くの相手と情報を共有するためのP2P通信ライブラリ。 開発中 / API未安定"
+"MistNet","https://github.com/tik-choco-lab/mistnet","Unity上の仮想空間で、参加者間の通信とオブジェクトの同期を扱うWebRTCベースのライブラリ。 OSS / MIT"
+"零界オンライン","https://tik-choco.github.io/tc-website/","魔法のある異世界で生活するオンラインゲームを目指しています。 開発中"

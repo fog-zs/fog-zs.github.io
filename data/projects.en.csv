@@ -1,5 +1,4 @@
-name,url,description
-Developing an anime-style otherworldly life simulator,https://tik-choco.github.io/tc-website/,
-Building a fully distributed metaverse,https://github.com/tik-choco-lab/,
-Games I have created,https://tc.tik-choco.com/,
-
+"name","url","description"
+"mistlib","https://github.com/tik-choco-lab/mistlib","A P2P communication library for participants in virtual spaces to share information with nearby peers. In development / Unstable API"
+"MistNet","https://github.com/tik-choco-lab/mistnet","A WebRTC library for peer communication and object synchronization in Unity virtual spaces. Open source / MIT"
+"Linkai Online","https://tik-choco.github.io/tc-website/","An online game aiming to offer everyday life in a fantasy world with magic. In development"

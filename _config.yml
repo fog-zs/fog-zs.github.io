@@ -1,0 +1,5 @@
+exclude:
+  - scripts
+  - package.json
+  - README.md
+  - data/content.mjs
