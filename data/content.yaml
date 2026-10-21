@@ -119,7 +119,7 @@ locales:
           - {label: mistlib-consensus, linkKey: consensus}
           - {label: MISTL（P2Pポート転送）, target: '#mistl'}
       - title: Rust
-        body: AIコーディングツールと一緒にRustで開発しています。Rustを一から自分だけで書くのではなく、AIと進める開発のやり方で、mistlibのコア・ネイティブライブラリ・WebAssembly版、MISTLのデーモンCLI、mistlib-consensusをつくっています。
+        body: AIコーディングツールと一緒に、Rustでmistlibのコア・ネイティブライブラリ・WebAssembly版、MISTLのデーモンCLI、mistlib-consensusを開発しています。
         evidence:
           - {label: mistlib, linkKey: mistlib}
           - {label: MISTL, linkKey: mistl}
@@ -354,7 +354,7 @@ locales:
           - {label: mistlib-consensus, linkKey: consensus}
           - {label: MISTL (P2P port forwarding), target: '#mistl'}
       - title: Rust
-        body: I build in Rust together with AI coding tools rather than writing it all by hand. That is how I make the mistlib core, native library and WebAssembly build, the MISTL daemon CLI, and mistlib-consensus.
+        body: Together with AI coding tools, I build the mistlib core, native library and WebAssembly build, the MISTL daemon CLI, and mistlib-consensus in Rust.
         evidence:
           - {label: mistlib, linkKey: mistlib}
           - {label: MISTL, linkKey: mistl}
@@ -590,7 +590,7 @@ locales:
           - {label: mistlib-consensus, linkKey: consensus}
           - {label: MISTL（P2P端口转发）, target: '#mistl'}
       - title: Rust
-        body: 我与AI编程工具协作用Rust开发，而不是完全靠自己从零手写。mistlib核心、原生库和WebAssembly版、MISTL守护进程CLI以及mistlib-consensus都是这样做出来的。
+        body: 我与AI编程工具协作，用Rust开发mistlib核心、原生库和WebAssembly版、MISTL守护进程CLI以及mistlib-consensus。
         evidence:
           - {label: mistlib, linkKey: mistlib}
           - {label: MISTL, linkKey: mistl}
