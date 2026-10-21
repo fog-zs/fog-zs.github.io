@@ -3,12 +3,16 @@
   const root = document.documentElement;
   const button = document.getElementById('themeToggle');
   const preference = window.matchMedia('(prefers-color-scheme: dark)');
+  const themeColor = document.querySelector('meta[name="theme-color"]') || document.createElement('meta');
+  themeColor.name = 'theme-color';
+  if (!themeColor.isConnected) document.head.append(themeColor);
   let saved;
   try { saved = localStorage.getItem('theme'); } catch { /* Storage is optional. */ }
   let explicit = saved === 'dark' || saved === 'light';
   function apply(dark) {
     root.dataset.theme = dark ? 'dark' : 'light';
     button?.setAttribute('aria-pressed', String(dark));
+    themeColor.content = getComputedStyle(root).getPropertyValue('--bg').trim();
   }
   apply(explicit ? saved === 'dark' : preference.matches);
   if (button) {
@@ -26,8 +30,6 @@
 // Enhance project details only. Without dialog support or JavaScript, <details> works.
 (() => {
   if (typeof HTMLDialogElement === 'undefined' || !HTMLDialogElement.prototype.showModal) return;
-  const lang = document.documentElement.lang;
-  const closeText = lang === 'ja' ? '閉じる' : lang.startsWith('zh') ? '关闭' : 'Close';
   for (const details of document.querySelectorAll('details[data-modal]')) {
     const summary = details.querySelector('summary');
     const content = details.querySelector('.detail-content');
@@ -35,19 +37,18 @@
     const dialog = document.createElement('dialog');
     dialog.id = details.dataset.modal;
     dialog.className = 'project-dialog';
+    dialog.setAttribute('tabindex', '-1');
     dialog.setAttribute('aria-labelledby', `${dialog.id}-title`);
     const header = document.createElement('div');
     header.className = 'dialog-header';
     const title = document.createElement('h2');
     title.id = `${dialog.id}-title`;
-    title.textContent = `${name} — ${summary.textContent}`;
-    const close = document.createElement('button');
-    close.type = 'button';
-    close.className = 'dialog-close';
-    close.textContent = closeText;
-    close.autofocus = true;
-    header.append(title, close);
-    dialog.append(header, content);
+    title.textContent = name;
+    header.append(title);
+    const scroll = document.createElement('div');
+    scroll.className = 'dialog-scroll';
+    scroll.append(header, content);
+    dialog.append(scroll);
     const row = document.createElement('div');
     row.className = 'detail-trigger';
     const trigger = document.createElement('button');
@@ -80,13 +81,12 @@
     trigger.addEventListener('click', () => {
       dialog.showModal();
       document.documentElement.classList.add('modal-open');
-      close.focus();
+      dialog.focus({ preventScroll: true });
       if (!reducedMotion() && dialog.animate) dialog.animate(
         [{ opacity: 0, transform: 'translateY(10px) scale(.98)' }, { opacity: 1, transform: 'translateY(0) scale(1)' }],
         { duration: 180, easing: 'cubic-bezier(.16, 1, .3, 1)' }
       );
     });
-    close.addEventListener('click', dismiss);
     dialog.addEventListener('cancel', event => { event.preventDefault(); dismiss(); });
     // Native dialog handles Escape and makes the rest of the page inert.
     dialog.addEventListener('close', () => {

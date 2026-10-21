@@ -1,4 +1,4 @@
 "name","url","description"
-"mistlib","https://github.com/tik-choco-lab/mistlib","让虚拟空间中的参与者与附近节点共享信息的P2P通信库。 开发中 / API尚未稳定"
-"MistNet","https://github.com/tik-choco-lab/mistnet","用于Unity虚拟空间中节点通信及对象同步的WebRTC库。 开源 / MIT"
-"零界オンライン","https://tik-choco.github.io/tc-website/","目标是在有魔法的异世界中生活的在线游戏。 开发中"
+"mistlib","https://github.com/tik-choco-lab/mistlib","让虚拟空间中的参与者与附近节点共享信息的P2P通信库。它取代了只能在Unity中使用的MistNet，既可以在Web应用中使用，也可以作为DLL使用。 开发中"
+"零界オンライン","https://linkai.tik-choco.com/","在森林里建造、合成物品和设计魔法的方块沙盒。最初用Unity开发，现在正作为网页游戏重新制作。 开发中"
+"MISTL","https://github.com/tik-choco/mistl","运行在mistlib上的Rust守护进程CLI，把tik-choco的多种功能放在一个二进制文件里。 开发中"

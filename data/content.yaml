@@ -1,0 +1,736 @@
+# 共通リンクは links、各言語の文章は locales の ja・en・zh に記述します。
+
+links:
+  github: https://github.com/fog-zs
+  x: https://x.com/zs_fog/
+  zenn: https://zenn.dev/fog
+  linkedin: https://www.linkedin.com/in/fog8360/
+  researchmap: https://researchmap.jp/fog
+  academic: https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202501021061357297
+  mistlib: https://github.com/tik-choco-lab/mistlib
+  mistnet: https://github.com/tik-choco-lab/mistnet
+  examples: https://github.com/tik-choco-lab/mistlib-examples
+  unity: https://github.com/tik-choco-lab/mistlib-unity
+  education: https://tik-choco.com/ja/about/
+  learning: https://tik-choco.com/ja/
+  linkai: https://tik-choco.github.io/tc-website/
+  linkaiBooth: https://booth.pm/ja/items/7607803
+  yuna: https://booth.pm/ja/items/1764954
+  hiyoko: https://booth.pm/ja/items/2053649
+  mistlibRole: https://github.com/tik-choco-lab/mistlib/commit/614c27037fc7fbb35e3c04b2a872e1ded3ab0646
+  mistnetRole: https://github.com/tik-choco-lab/mistnet/commit/2b1b3563a63d2a3c6b711c4f61a09e7e6e6e0bd2
+  linkaiPlay: https://linkai.tik-choco.com/
+  mistl: https://github.com/tik-choco/mistl
+  mistlReleases: https://github.com/tik-choco/mistl/releases/latest
+  consensus: https://github.com/tik-choco-lab/mistlib-consensus
+  mistai: https://github.com/tik-choco-lab/mistai
+  catalog: https://tc.tik-choco.com/
+  tikchocoOnline: https://youtu.be/PwGIL2vJ888
+  gdm: https://github.com/metaverse-gdm
+locales:
+  ja:
+    lang: ja
+    path: /
+    ogLocale: ja_JP
+    title: fog / 田中勇気：P2P・分散システムの研究と仮想世界づくり
+    description: fog（曉霧 / 田中勇気）です。P2P・分散システムの研究と、mistlib・零界オンライン・MISTLなどの開発をしています。技術解説やゲームも載せています。
+    skip: 本文へ
+    nav:
+      - つくっているもの
+      - できること
+      - 研究
+      - 活動
+      - About
+    theme: ダークテーマ
+    tagline:
+      - 誰もが異世界で
+      - 幸せに暮らせる未来をつくる。
+    intro: P2P・分散システムを研究しています。仮想世界の通信基盤とアプリもつくっています。
+    affiliation: 大分大学大学院 工学研究科 博士後期課程
+    affiliationSource: 研究者プロフィール
+    email: Email
+    profileLink: J-GLOBAL
+    avatarAlt: fogのアバター。猫耳のキャラクター
+    workTitle: つくっているもの
+    workIntro: ""
+    purpose: 目的
+    role: 担当
+    design: 設計・技術
+    output: 公開しているもの
+    status: 現在の状態
+    source: GitHub
+    history: 開発履歴
+    official: 公式紹介
+    distribution: 配布ページ
+    projects:
+      - id: mistlib
+        number: "01"
+        kind: P2P / RUST
+        name: mistlib
+        subtitle: Unityに依存しない、Web・ネイティブ両対応のP2P通信ライブラリ
+        badge: 開発中
+        purpose: 仮想空間で近くの相手と情報を共有するP2P通信ライブラリです。Unity専用だったMistNetを置き換え、WebアプリからもDLLとしても使えるようにしました。
+        role: AIコーディングツールと一緒に、Rustコアとネイティブ版、WebAssembly版の実装・テストを進めています。
+        design: 位置とAOI（周囲の関心領域）から、近傍と各方向の接続相手を選びます。直接つながっていない相手へのメッセージは、参加者の接続網で中継します。
+        output: Rust製で、通信にはWebRTC DataChannelを使います。ネイティブライブラリとブラウザ用WebAssembly、npm @tik-choco/mistlibをMPL-2.0で公開しています。
+        status: NostrリレーとSTUNを使い、必要に応じてTURNも使います。既定の接続予算は各ノード30で、全体の参加人数の上限や性能保証ではありません。
+        sourceKey: mistlib
+        roleKey: mistlibRole
+      - id: linkai
+        number: "03"
+        kind: GAME / WORLD
+        name: 零界オンライン
+        subtitle: Linkai Online
+        badge: 開発中
+        purpose: 森で建築やクラフト、魔法づくりができるブロックサンドボックスです。もともとUnityで作っていましたが、Webゲームとして作り直しています。
+        role: Unity版・Web版とも、ゲームの設計とプログラムのほぼすべてを担当しています。
+        design: 舞台はシードから生成する1 km × 1 kmの密な森で、ブロック・線・壁・床・設計図による建築、クラフト、魔法装置、夜のモンスター、「blight」エリアを実装しています。魔法は元素・形状・振る舞い・条件を組み合わせるノードグラフで、LLMでも生成できます。
+        output: Web版はPreact・Vite・TypeScript・three.js製で、UIは英語・日本語・中国語に対応し、ランチャーなしでブラウザから遊べます。公式サイトで紹介しています。BOOTHで配布しているランチャー版は、以前のUnity版です。
+        status: Web版を作り直している途中です。mistlibによるP2P協力プレイ、リンクやコードでのルーム参加、パーティーのボイスチャット・画面共有、VRMアバターに対応しています。専用ゲームサーバーは不要です。Unity版の開発はやめています。
+        sourceKey: linkai
+        secondaryKey: linkaiBooth
+        playKey: linkaiPlay
+      - id: mistl
+        number: "04"
+        kind: P2P / CLI
+        name: MISTL
+        subtitle: tik-chocoの機能をまとめたCLI
+        badge: 開発中
+        purpose: tik-chocoの各種機能を1つのバイナリにまとめた、mistlib上で動くRust製デーモンCLIです。
+        role: 設計を考え、AIコーディングツールと一緒にRustで実装しています。
+        design: tc-storage互換のdid:key（Ed25519）IDとコンテンツアドレス方式のストレージ、VRChatのAVProプレイヤーで再生できる画面共有RTSPサーバー、ブラウザのタブを開かずにチャットを続けるtc-chatリレーを備えています。mistネットワーク経由のP2Pポート転送は接続ごとの承認・トラストストア・監査ログに対応し、mistai互換のP2P AIネットワークも使えます。
+        output: Windows版は単体で動くmistl.exeとして配布し、コマンドはmistl、内蔵Webダッシュボードは英語・日本語対応でhttp://127.0.0.1:6480/から使えます。ソースコードとリリースはGitHub、ライセンスはMPL-2.0です。
+        status: 開発中です。新しい版はGitHubのリリースページで公開しています。
+        sourceKey: mistl
+        secondaryKey: mistlReleases
+    relatedTitle: mistlibの関連資料
+    examplesText: Python・Web・Unity向けクライアントと使用例で、ライセンスはApache-2.0です。エンジンは別途必要で、READMEにWeb/WASM、Python・Unity/nativeの構成を載せています。
+    unityText: mistlibをUnityから使うための実験的なバインディングです。対応環境と制限はREADMEを参照してください。バインディング等はApache-2.0、ネイティブエンジンはMPL-2.0です。
+    appsTitle: 作品一覧
+    appsText: ゲームやツール、ライブラリの一覧です。TC Space・TC Town・TC Chat・TC Storage・MISTL・mistlibなどを載せています。
+    appsLink: 作品一覧を見る
+    skillsTitle: できること
+    skills:
+      - title: P2P / ネットワーク
+        body: WebRTC DataChannel、AOIに基づく接続相手の選択と中継、STUN/TURNによるNAT越え、Nostrシグナリング、Raft / HotStuffによる合意形成を実装しています。
+        evidence:
+          - {label: mistlib, target: '#mistlib'}
+          - {label: MistNet, linkKey: mistnet}
+          - {label: mistlib-consensus, linkKey: consensus}
+          - {label: MISTL（P2Pポート転送）, target: '#mistl'}
+      - title: Rust
+        body: AIコーディングツールと一緒にRustで開発しています。Rustを一から自分だけで書くのではなく、AIと進める開発のやり方で、mistlibのコア・ネイティブライブラリ・WebAssembly版、MISTLのデーモンCLI、mistlib-consensusをつくっています。
+        evidence:
+          - {label: mistlib, linkKey: mistlib}
+          - {label: MISTL, linkKey: mistl}
+          - {label: mistlib-consensus, linkKey: consensus}
+      - title: TypeScript / Web
+        body: 零界オンラインのWeb版ではPreact・Vite・three.js・VRMを使っています。mistaiやTC Chat、TC PapersなどのWebアプリも開発しています。
+        evidence:
+          - {label: 零界オンライン, target: '#linkai'}
+          - {label: mistai, linkKey: mistai}
+          - {label: TCアプリ, linkKey: catalog}
+      - title: Unity / C#
+        body: MistNetとmistlib-unity、以前のゲームを開発しました。魔法使いユーナではシナリオ・プログラム・音楽を担当しました。
+        evidence:
+          - {label: MistNet, linkKey: mistnet}
+          - {label: mistlib-unity, linkKey: unity}
+          - {label: 魔法使いユーナ, target: '#yuna'}
+      - title: 研究・執筆
+        body: P2P・分散システム・ネットワーク仮想環境を研究し、国際会議論文や発表にまとめています。Nawashiroと運営する「P2Pのしくみ」では、記事と、P2Pの通信の動きを確かめられるシミュレーション（TypeScript製）をつくっています。
+        evidence:
+          - {label: ICCE-Taiwan 2024, target: '#icce2024'}
+          - {label: ICCE-Taiwan 2023, target: '#icce2023'}
+          - {label: 発表・論文, target: '#research'}
+          - {label: P2Pのしくみ, target: '#education'}
+    timelineTitle: これまでの活動
+    timeline:
+      - year: "2027"
+        text: "大分大学大学院 工学研究科 博士後期課程 修了見込み"
+      - year: "2026"
+        text: "SNPD 2026 で研究発表"
+        label: "SNPD 2026"
+        target: "#snpd2026"
+      - year: "2026"
+        text: "零界オンラインを Web ゲームとして作り直し開始"
+        label: "零界オンライン"
+        target: "#linkai"
+      - year: "2026"
+        text: "MISTL（デーモン CLI）の開発開始"
+        label: "MISTL"
+        target: "#mistl"
+      - year: "2026"
+        text: "Unity 専用だった MistNet の後継として、mistlib を Rust で開発開始"
+        label: "mistlib"
+        target: "#mistlib"
+      - year: "2025"
+        text: "情報処理学会DPS第205回研究会で発表（Kademlia を含む三層構造アーキテクチャ）"
+        label: "情報処理学会DPS第205回研究会"
+        publicationKey: "dps2025"
+      - year: "2025"
+        text: "零界オンライン（Unity 版）のランチャーを BOOTH で公開"
+        label: "零界オンライン（Unity 版）"
+        linkKey: "linkaiBooth"
+      - year: "2024"
+        text: "MistNet の論文が ICCE-Taiwan 2024 の会議録に掲載"
+        label: "ICCE-Taiwan 2024"
+        target: "#icce2024"
+      - year: "2024"
+        text: "大分大学大学院 工学研究科 博士前期課程 修了、博士後期課程へ進学"
+      - year: "2023"
+        text: "ICCE-Taiwan 2023 の会議録に論文掲載"
+        label: "ICCE-Taiwan 2023"
+        target: "#icce2023"
+      - year: "2023"
+        text: "VRChat でゲーム開発集会を開始（第0回：2023年3月2日）"
+        label: "ゲーム開発集会"
+        linkKey: "gdm"
+      - year: "2023"
+        text: "零界オンライン（Unity 版）の開発と公式サイト制作"
+        label: "公式サイト"
+        linkKey: "linkai"
+      - year: "2022"
+        text: "TikChocoOnline を開発（アニメ風の異世界ファンタジー、メタバース + オンラインゲーム）"
+        label: "TikChocoOnline"
+        linkKey: "tikchocoOnline"
+      - year: "2022"
+        text: "大分大学 理工学部 共創理工学科 知能情報システムコース 卒業、同大学院 博士前期課程へ進学"
+      - year: "2020"
+        text: "友人と Minecraft サーバーを立ち上げて運営、運用を担当（2020年9月〜2021年8月）"
+      - year: "2019"
+        text: "魔法使いユーナを C97 で頒布（シナリオ・プログラム・音楽を担当）"
+        label: "魔法使いユーナ"
+        target: "#yuna"
+      - year: "2018"
+        text: "大学で最初のゲーム、ひよこ村を文化祭で公開"
+        label: "ひよこ村"
+        target: "#hiyoko"
+      - year: "2018"
+        text: "高校卒業、大分大学 理工学部 共創理工学科 知能情報システムコース 入学"
+      - year: "2016"
+        text: "横スクロールシューティング、勇者とモンスターを公開"
+        label: "勇者とモンスター"
+        linkKey: "catalog"
+      - year: "2015"
+        text: "シューティングゲーム、ドラゴンと勇者を公開"
+        label: "ドラゴンと勇者"
+        linkKey: "catalog"
+      - year: "2015"
+        text: "高校入学"
+      - year: "2014"
+        text: "友人と RPG を制作"
+    researchTitle: 研究
+    researchIntro: P2P・分散システム・ネットワーク仮想環境を研究しています。参加者の位置に応じた接続と、位置情報の共有・整合性がテーマです。
+    researchProfile: 研究者情報 / researchmap
+    pubGroups:
+      presentation: 最近の発表
+      international: 国際会議論文
+      workshop: 研究会発表
+      domestic: 国内会議録・発表概要集
+    pubStatus:
+      self-reported-presented: 発表済み
+      bibliography-verified: 会議録掲載
+      program-verified: 公式プログラム掲載
+    selfNote: SNPD 2026で発表しました。
+    presenter: 発表者
+    program: 2025-12-24 / セッション7
+    paperLink: 書誌・DOI
+    programLink: 公式プログラム
+    motivationLead: 夢は、誰もが異世界で幸せに暮らせる未来をつくることです。
+    motivationBody: 参加者が通信や状態の共有を担う仕組みを研究しています。通信ライブラリや仮想世界もつくっています。
+    motivationEnd: 今は、通信の遅延や状態の整合性、不正への対策など、世界を維持する仕組みについて研究しています。
+    moreTitle: 技術解説と以前のゲーム
+    educationTitle: P2Pのしくみ
+    educationBadge: 技術解説 / 共同運営
+    educationBody: Nawashiroと一緒に、P2Pのしくみを学べるサイトを運営しています。私は主に記事の執筆と、P2Pの通信を動かして見せるシミュレーションの実装（TypeScript）を担当しています。専門家でなくても通信のしくみがわかるように、図や動きを使って説明しています。
+    educationLink: P2Pのしくみを学ぶ
+    educationSource: 運営・担当について
+    yunaTitle: 魔法使いユーナ
+    yunaDate: 2019-12-31 公開
+    yunaBody: 魔法で敵と戦うRPGです。私はシナリオ・プログラム・音楽を担当しました。キャラクターデザインはロロロ、広報はTuckyです。
+    hiyokoTitle: ひよこ村
+    hiyokoDate: 2018 文化祭で公開
+    hiyokoBody: 大学生になって初めてつくったゲームです。2018年の文化祭で公開し、今はBOOTHで配布しています。
+    aboutTitle: fog / 曉霧
+    aboutBody: fogです。曉霧とも名乗っています。研究では田中勇気 / Yuki Tanakaの名前を使っています。
+    contactTitle: プロフィール・連絡先
+    contactBody: 日々の活動はGitHubやX、Zennに載せています。OSSの質問や不具合の報告は、各リポジトリのIssueへどうぞ。
+    top: ページの先頭へ
+    play: プレイ
+    predecessor: MistNet（旧版）
+    mistnetText: mistlibの前身です。Unityの仮想空間で通信とオブジェクトの同期（位置・アニメーション・変数・RPC）を扱うWebRTCライブラリで、MITライセンスです。ICCE-Taiwan 2024の論文はこのMistNetについてのものです。
+    launcher: 配布ページ（旧Unity版）
+    releases: リリース
+    consensusText: P2Pメッシュ向けの複製状態機械で、信頼できるピア間ではRaft、信頼できないピアを含む場合はHotStuffを使います。Rust製でコアはネイティブとwasm32に対応し、MPL-2.0の実験的な実装で、セキュリティ監査は未実施です。
+    mistaiText: HTTPモデル接続の共有とP2P AIルーム用のTypeScriptライブラリで、チャット・TTS・STT・OpenAI互換HTTPトンネルが、注入した1つのトランスポートを共有します。Preact製の設定UIは任意で使え、ライセンスはMPL-2.0です。
+  en:
+    lang: en
+    path: /en/
+    ogLocale: en_US
+    title: "fog / Yuki Tanaka: P2P research, distributed systems & virtual worlds"
+    description: I'm fog (曉霧 / Yuki Tanaka). I research P2P and distributed systems and work on mistlib, Linkai Online and MISTL. I also share technical explanations and games here.
+    skip: Skip to content
+    nav:
+      - Projects
+      - Skills
+      - Research
+      - Timeline
+      - About
+    theme: Dark theme
+    tagline:
+      - Building a future where everyone
+      - can live happily in another world.
+    intro: I research P2P and distributed systems. I also build networking infrastructure and apps for virtual worlds.
+    affiliation: Doctoral program, Graduate School of Engineering, Oita University
+    affiliationSource: Researcher profile
+    email: Email
+    profileLink: J-GLOBAL
+    avatarAlt: fog’s avatar, a character with cat ears
+    workTitle: What I’m building
+    workIntro: ""
+    purpose: Purpose
+    role: My contribution
+    design: Design & technology
+    output: Available
+    status: Current status
+    source: GitHub
+    history: Development history
+    official: Official introduction
+    distribution: Distribution page
+    projects:
+      - id: mistlib
+        number: "01"
+        kind: P2P / RUST
+        name: mistlib
+        subtitle: A P2P networking library for the web and native apps, without Unity
+        badge: In development
+        purpose: A P2P networking library for sharing information with nearby peers in virtual spaces. It replaces MistNet, which only worked in Unity, and can be used from web apps or as a DLL.
+        role: I build and test the Rust core, native library and WebAssembly build together with AI coding tools.
+        design: It selects nearby peers and peers in each direction by position and area of interest (AOI). Messages to peers without a direct connection are relayed through the participant network.
+        output: Written in Rust, using WebRTC DataChannel for communication. The native library, browser WebAssembly build and npm package @tik-choco/mistlib are available under MPL-2.0.
+        status: It uses Nostr relays and STUN, with TURN when needed. The default connection budget is 30 per node; this does not set a total participant limit or guarantee performance.
+        sourceKey: mistlib
+        roleKey: mistlibRole
+      - id: linkai
+        number: "03"
+        kind: GAME / WORLD
+        name: Linkai Online
+        subtitle: 零界オンライン
+        badge: In development
+        purpose: A block sandbox where you can build, craft and create spells in a forest. I first built it in Unity and am now remaking it as a web game.
+        role: I design the game and write almost all of its code, in both the Unity and web versions.
+        design: The world is a dense, seed-generated 1 km × 1 km forest with building using blocks, lines, walls, floors and blueprints, plus crafting, magic devices, night monsters and blight areas. Spells are node graphs combining element, shape, behavior and condition; an LLM can generate them too.
+        output: The web version uses Preact, Vite, TypeScript and three.js, has English, Japanese and Chinese UI, and runs in the browser without a launcher. The official site introduces the game. The launcher version on BOOTH is the earlier Unity version.
+        status: The web remake is in progress. It has mistlib P2P co-op, rooms joined by link or code, party voice chat and screen sharing, and VRM avatars, and needs no dedicated game server. I've stopped developing the Unity version.
+        sourceKey: linkai
+        secondaryKey: linkaiBooth
+        playKey: linkaiPlay
+      - id: mistl
+        number: "04"
+        kind: P2P / CLI
+        name: MISTL
+        subtitle: A CLI for tik-choco features
+        badge: In development
+        purpose: A Rust daemon CLI that runs on mistlib and packages tik-choco features in one binary.
+        role: I design it and implement it in Rust together with AI coding tools.
+        design: It provides tc-storage-compatible did:key (Ed25519) identity and content-addressed storage, a screen-sharing RTSP server playable by VRChat's AVPro player, and a tc-chat relay that keeps chat running without an open browser tab. P2P port forwarding over the mist network supports per-connection approval, a trust store and an audit log; a mistai-compatible P2P AI network is also supported.
+        output: The mistl CLI has a built-in English/Japanese web dashboard at http://127.0.0.1:6480/ and is distributed on Windows as a standalone mistl.exe. Source and releases are on GitHub under MPL-2.0.
+        status: In development. New versions are published on the GitHub releases page.
+        sourceKey: mistl
+        secondaryKey: mistlReleases
+    relatedTitle: mistlib resources
+    examplesText: Python, Web and Unity clients and examples, licensed under Apache-2.0. A separate engine build is required; the README covers Web/WASM and Python or Unity/native setups.
+    unityText: Experimental bindings for using mistlib from Unity. See the README for supported platforms and limitations. Bindings and samples use Apache-2.0 and the native engine uses MPL-2.0.
+    appsTitle: Catalogue
+    appsText: A list of my games, tools and libraries. It includes TC Space, TC Town, TC Chat, TC Storage, MISTL and mistlib.
+    appsLink: Browse the catalogue
+    skillsTitle: Skills
+    skills:
+      - title: P2P / Networking
+        body: I implement WebRTC DataChannel networking, AOI-based peer selection and relaying, NAT traversal with STUN/TURN, Nostr signaling, and consensus with Raft / HotStuff.
+        evidence:
+          - {label: mistlib, target: '#mistlib'}
+          - {label: MistNet, linkKey: mistnet}
+          - {label: mistlib-consensus, linkKey: consensus}
+          - {label: MISTL (P2P port forwarding), target: '#mistl'}
+      - title: Rust
+        body: I build in Rust together with AI coding tools rather than writing it all by hand. That is how I make the mistlib core, native library and WebAssembly build, the MISTL daemon CLI, and mistlib-consensus.
+        evidence:
+          - {label: mistlib, linkKey: mistlib}
+          - {label: MISTL, linkKey: mistl}
+          - {label: mistlib-consensus, linkKey: consensus}
+      - title: TypeScript / Web
+        body: I use Preact, Vite, three.js and VRM in the web version of Linkai Online. I also develop mistai and web apps such as TC Chat and TC Papers.
+        evidence:
+          - {label: Linkai Online, target: '#linkai'}
+          - {label: mistai, linkKey: mistai}
+          - {label: TC apps, linkKey: catalog}
+      - title: Unity / C#
+        body: I developed MistNet, mistlib-unity and earlier games. For 魔法使いユーナ, I wrote the scenario, programmed the game and made the music.
+        evidence:
+          - {label: MistNet, linkKey: mistnet}
+          - {label: mistlib-unity, linkKey: unity}
+          - {label: 魔法使いユーナ, target: '#yuna'}
+      - title: Research & writing
+        body: I study P2P, distributed systems and networked virtual environments, and write conference papers and give presentations about my work. I write articles and interactive P2P simulations (built with TypeScript) for How P2P works, a site I run with Nawashiro.
+        evidence:
+          - {label: ICCE-Taiwan 2024, target: '#icce2024'}
+          - {label: ICCE-Taiwan 2023, target: '#icce2023'}
+          - {label: Presentations & papers, target: '#research'}
+          - {label: How P2P works, target: '#education'}
+    timelineTitle: Timeline
+    timeline:
+      - year: "2027"
+        text: "Expected to complete the doctoral program, Graduate School of Engineering, Oita University"
+      - year: "2026"
+        text: "Presented at SNPD 2026"
+        label: "SNPD 2026"
+        target: "#snpd2026"
+      - year: "2026"
+        text: "Started remaking Linkai Online as a web game"
+        label: "Linkai Online"
+        target: "#linkai"
+      - year: "2026"
+        text: "Started MISTL, a daemon CLI"
+        label: "MISTL"
+        target: "#mistl"
+      - year: "2026"
+        text: "Started mistlib in Rust as the successor to the Unity-only MistNet"
+        label: "mistlib"
+        target: "#mistlib"
+      - year: "2025"
+        text: "Presented at the IPSJ DPS 205 workshop (a three-layer architecture including Kademlia)"
+        label: "IPSJ DPS 205 workshop"
+        publicationKey: "dps2025"
+      - year: "2025"
+        text: "Released the Unity version of Linkai Online on BOOTH"
+        label: "Unity version of Linkai Online"
+        linkKey: "linkaiBooth"
+      - year: "2024"
+        text: "MistNet paper published in the ICCE-Taiwan 2024 proceedings"
+        label: "ICCE-Taiwan 2024"
+        target: "#icce2024"
+      - year: "2024"
+        text: "Completed the master’s program, Graduate School of Engineering, Oita University; started the doctoral program"
+      - year: "2023"
+        text: "Paper published in the ICCE-Taiwan 2023 proceedings"
+        label: "ICCE-Taiwan 2023"
+        target: "#icce2023"
+      - year: "2023"
+        text: "Started the Game Development Meetup in VRChat (meetup #0 on March 2, 2023)"
+        label: "Game Development Meetup"
+        linkKey: "gdm"
+      - year: "2023"
+        text: "Developing the Unity version of Linkai Online and building its official site"
+        label: "official site"
+        linkKey: "linkai"
+      - year: "2022"
+        text: "Developed TikChocoOnline, an anime-style fantasy world game (metaverse + online game)"
+        label: "TikChocoOnline"
+        linkKey: "tikchocoOnline"
+      - year: "2022"
+        text: "Graduated from the Faculty of Science and Technology, Oita University (Intelligent Information Systems course); started the master’s program"
+      - year: "2020"
+        text: "Started and ran a Minecraft server with friends from scratch; I handled operations (Sep 2020 to Aug 2021)"
+      - year: "2019"
+        text: "魔法使いユーナ distributed at C97 (scenario, programming and music)"
+        label: "魔法使いユーナ"
+        target: "#yuna"
+      - year: "2018"
+        text: "ひよこ村, my first game at university, shown at the school festival"
+        label: "ひよこ村"
+        target: "#hiyoko"
+      - year: "2018"
+        text: "Graduated from high school; entered the Faculty of Science and Technology, Oita University (Intelligent Information Systems course)"
+      - year: "2016"
+        text: "Released 勇者とモンスター, a side-scrolling shooter"
+        label: "勇者とモンスター"
+        linkKey: "catalog"
+      - year: "2015"
+        text: "Released ドラゴンと勇者, a shooting game"
+        label: "ドラゴンと勇者"
+        linkKey: "catalog"
+      - year: "2015"
+        text: "Entered high school"
+      - year: "2014"
+        text: "Made an RPG with friends"
+    researchTitle: Research
+    researchIntro: I research P2P, distributed systems and networked virtual environments. I study how to select connections by participant position and share consistent position data.
+    researchProfile: Researcher profile / researchmap
+    pubGroups:
+      presentation: Recent presentations
+      international: International conference papers
+      workshop: Research workshop presentations
+      domestic: Domestic proceedings & abstracts
+    pubStatus:
+      self-reported-presented: Presented
+      bibliography-verified: Published in proceedings
+      program-verified: Listed in official program
+    selfNote: I presented this work at SNPD 2026.
+    presenter: Presenter
+    program: 2025-12-24 / Session 7
+    paperLink: Bibliography / DOI
+    programLink: Official program
+    motivationLead: My dream is to build a future where everyone can live happily in another world.
+    motivationBody: I research ways for participants to handle communication and shared state. I also build networking libraries and virtual worlds.
+    motivationEnd: Right now I'm researching how to keep a world running, including latency, state consistency and abuse prevention.
+    moreTitle: Technical explanations and earlier games
+    educationTitle: P2Pのしくみ / How P2P works
+    educationBadge: Technical education / Joint operation
+    educationBody: I run this P2P learning site with Nawashiro. I mainly write the articles and build the interactive simulations of P2P networking, written in TypeScript. I use diagrams and interactive examples to explain networking to readers outside the field.
+    educationLink: Learn how P2P works
+    educationSource: Operators & contributions
+    yunaTitle: 魔法使いユーナ
+    yunaDate: Released 2019-12-31
+    yunaBody: >-
+      An RPG about fighting with magic. I wrote the scenario, programmed the game and made the music. Character design is by ロロロ, and publicity by Tucky.
+    hiyokoTitle: ひよこ村
+    hiyokoDate: Released at a school festival in 2018
+    hiyokoBody: The first game I made after starting university. I released it at a school festival in 2018; it is now available on BOOTH.
+    aboutTitle: fog / 曉霧
+    aboutBody: I’m fog, also known as 曉霧. I publish research under the name Yuki Tanaka / 田中勇気.
+    contactTitle: Profiles & contact
+    contactBody: I share my work on GitHub, X and Zenn. Please use the relevant repository's Issues for questions or bug reports about my open-source work.
+    top: Back to top
+    play: Play
+    predecessor: MistNet (previous version)
+    mistnetText: The predecessor of mistlib. A WebRTC library for networking and object sync (position, animation, variables, RPC) in Unity virtual spaces, under the MIT license. The ICCE-Taiwan 2024 paper is about MistNet.
+    launcher: Download (old Unity version)
+    releases: Releases
+    consensusText: Replicated state machines for P2P meshes, using Raft for trusted peers and HotStuff when the network includes untrusted peers. Written in Rust with native and wasm32 core support under MPL-2.0; the implementation is experimental and has not had a security audit.
+    mistaiText: A TypeScript library for sharing HTTP model connections and running P2P AI rooms, with chat, TTS, STT and an OpenAI-compatible HTTP tunnel sharing one injected transport. A Preact settings UI is optional; the license is MPL-2.0.
+  zh:
+    lang: zh-Hans
+    path: /zh/
+    ogLocale: zh_CN
+    title: fog / 田中勇気：P2P、分布式系统研究与虚拟世界开发
+    description: 我是fog（曉霧 / 田中勇気）。我研究P2P和分布式系统，参与mistlib、零界在线和MISTL的开发。这里也有我写的技术讲解和做的游戏。
+    skip: 跳转至正文
+    nav:
+      - 项目
+      - 技能
+      - 研究
+      - 经历
+      - 关于
+    theme: 深色主题
+    tagline:
+      - 创造一个让每个人
+      - 都能在异世界幸福生活的未来。
+    intro: 我研究P2P和分布式系统，也开发虚拟世界的通信基础设施和应用。
+    affiliation: 大分大学大学院 工学研究科 博士后期课程
+    affiliationSource: 研究者资料
+    email: 邮箱
+    profileLink: J-GLOBAL
+    avatarAlt: fog的虚拟形象，一位猫耳角色
+    workTitle: 我正在做的项目
+    workIntro: ""
+    purpose: 目的
+    role: 负责范围
+    design: 设计与技术
+    output: 成果物
+    status: 当前状态
+    source: GitHub
+    history: 开发记录
+    official: 官方介绍
+    distribution: 发布页面
+    projects:
+      - id: mistlib
+        number: "01"
+        kind: P2P / RUST
+        name: mistlib
+        subtitle: 不依赖Unity、可用于Web和原生应用的P2P通信库
+        badge: 开发中
+        purpose: 让虚拟空间中的参与者与附近节点共享信息的P2P通信库。它取代了只能在Unity中使用的MistNet，既可以在Web应用中使用，也可以作为DLL使用。
+        role: 我与AI编程工具协作，推进Rust核心、原生库和WebAssembly版的实现与测试。
+        design: 根据位置和AOI（周围的关注区域）选择附近及各方向的连接对象。没有直连的节点之间通过参与者组成的网络转发消息。
+        output: 用Rust编写，通过WebRTC DataChannel通信。原生库、浏览器WebAssembly版和npm包@tik-choco/mistlib均以MPL-2.0许可发布。
+        status: 使用Nostr中继和STUN，必要时使用TURN。每个节点的默认连接预算是30，这不代表总参与人数上限，也不保证性能。
+        sourceKey: mistlib
+        roleKey: mistlibRole
+      - id: linkai
+        number: "03"
+        kind: GAME / WORLD
+        name: 零界オンライン
+        subtitle: Linkai Online
+        badge: 开发中
+        purpose: 在森林里建造、合成物品和设计魔法的方块沙盒。最初用Unity开发，现在正作为网页游戏重新制作。
+        role: 无论Unity版还是网页版，游戏的设计和几乎全部程序都由我负责。
+        design: 用种子生成1 km × 1 km的茂密森林，支持用方块、线、墙、地板和蓝图建造，也有合成、魔法装置、夜间怪物和“blight”区域。魔法用节点图组合元素、形状、行为和条件，也可以用LLM生成。
+        output: 网页版用Preact、Vite、TypeScript和three.js开发，界面支持英语、日语和中文，无需启动器就能在浏览器中游玩。官网介绍游戏。BOOTH上的启动器版是以前的Unity版。
+        status: 网页版正在重新制作中，支持基于mistlib的P2P合作游玩、通过链接或代码加入房间、队伍语音聊天和屏幕共享，以及VRM形象，无需专用游戏服务器。Unity版已停止开发。
+        sourceKey: linkai
+        secondaryKey: linkaiBooth
+        playKey: linkaiPlay
+      - id: mistl
+        number: "04"
+        kind: P2P / CLI
+        name: MISTL
+        subtitle: 整合tik-choco功能的CLI
+        badge: 开发中
+        purpose: 运行在mistlib上的Rust守护进程CLI，把tik-choco的多种功能放在一个二进制文件里。
+        role: 我负责设计，并与AI编程工具协作用Rust实现。
+        design: 提供兼容tc-storage的did:key（Ed25519）身份和内容寻址存储、可用VRChat的AVPro播放器播放的屏幕共享RTSP服务器，以及不用打开浏览器标签页就能持续聊天的tc-chat中继。mist网络上的P2P端口转发支持逐连接审批、信任存储和审计日志，也支持兼容mistai的P2P AI网络。
+        output: 命令是mistl，Windows版以可独立运行的mistl.exe发布，内置的Web控制面板位于http://127.0.0.1:6480/，支持英语和日语。源码和发布版本在GitHub上公开，采用MPL-2.0许可。
+        status: 开发中。新版本发布在GitHub的发布页面上。
+        sourceKey: mistl
+        secondaryKey: mistlReleases
+    relatedTitle: mistlib相关资料
+    examplesText: Python、Web、Unity客户端和使用示例，采用Apache-2.0许可。需要另行取得引擎，README中有Web/WASM以及Python或Unity/native的配置说明。
+    unityText: 用于在Unity中使用mistlib的实验性绑定。支持的环境和限制请参阅README。绑定等采用Apache-2.0，原生引擎采用MPL-2.0。
+    appsTitle: 作品目录
+    appsText: 我的游戏、工具和库的列表。包括TC Space、TC Town、TC Chat、TC Storage、MISTL和mistlib等。
+    appsLink: 浏览作品目录
+    skillsTitle: 技能
+    skills:
+      - title: P2P / 网络
+        body: 我实现WebRTC DataChannel通信、基于AOI的节点选择与消息转发、STUN/TURN NAT穿透、Nostr信令，以及Raft / HotStuff共识算法。
+        evidence:
+          - {label: mistlib, target: '#mistlib'}
+          - {label: MistNet, linkKey: mistnet}
+          - {label: mistlib-consensus, linkKey: consensus}
+          - {label: MISTL（P2P端口转发）, target: '#mistl'}
+      - title: Rust
+        body: 我与AI编程工具协作用Rust开发，而不是完全靠自己从零手写。mistlib核心、原生库和WebAssembly版、MISTL守护进程CLI以及mistlib-consensus都是这样做出来的。
+        evidence:
+          - {label: mistlib, linkKey: mistlib}
+          - {label: MISTL, linkKey: mistl}
+          - {label: mistlib-consensus, linkKey: consensus}
+      - title: TypeScript / Web
+        body: 零界在线的网页版使用Preact、Vite、three.js和VRM。我也开发mistai和TC Chat、TC Papers等Web应用。
+        evidence:
+          - {label: 零界在线, target: '#linkai'}
+          - {label: mistai, linkKey: mistai}
+          - {label: TC应用, linkKey: catalog}
+      - title: Unity / C#
+        body: 我开发过MistNet、mistlib-unity和以前的游戏。在魔法使いユーナ中，我负责剧本、程序和音乐。
+        evidence:
+          - {label: MistNet, linkKey: mistnet}
+          - {label: mistlib-unity, linkKey: unity}
+          - {label: 魔法使いユーナ, target: '#yuna'}
+      - title: 研究与写作
+        body: 我研究P2P、分布式系统和网络虚拟环境，将研究写成国际会议论文并作报告。我和Nawashiro一起运营「P2P的工作原理」，负责文章写作和用TypeScript编写的P2P通信模拟。
+        evidence:
+          - {label: ICCE-Taiwan 2024, target: '#icce2024'}
+          - {label: ICCE-Taiwan 2023, target: '#icce2023'}
+          - {label: 报告与论文, target: '#research'}
+          - {label: P2P的工作原理, target: '#education'}
+    timelineTitle: 经历
+    timeline:
+      - year: "2027"
+        text: "大分大学大学院 工学研究科 博士后期课程 预计结业"
+      - year: "2026"
+        text: "在SNPD 2026作研究报告"
+        label: "SNPD 2026"
+        target: "#snpd2026"
+      - year: "2026"
+        text: "开始将零界在线重制为网页游戏"
+        label: "零界在线"
+        target: "#linkai"
+      - year: "2026"
+        text: "开始开发守护进程CLI MISTL"
+        label: "MISTL"
+        target: "#mistl"
+      - year: "2026"
+        text: "作为仅限Unity的MistNet的后继，开始用Rust开发mistlib"
+        label: "mistlib"
+        target: "#mistlib"
+      - year: "2025"
+        text: "在信息处理学会DPS第205次研究会上报告（包含Kademlia的三层结构架构）"
+        label: "信息处理学会DPS第205次研究会"
+        publicationKey: "dps2025"
+      - year: "2025"
+        text: "在BOOTH上发布零界在线（Unity版）的启动器"
+        label: "零界在线（Unity版）"
+        linkKey: "linkaiBooth"
+      - year: "2024"
+        text: "MistNet论文收录于ICCE-Taiwan 2024会议论文集"
+        label: "ICCE-Taiwan 2024"
+        target: "#icce2024"
+      - year: "2024"
+        text: "大分大学大学院 工学研究科 博士前期课程 结业，升入博士后期课程"
+      - year: "2023"
+        text: "论文收录于ICCE-Taiwan 2023会议论文集"
+        label: "ICCE-Taiwan 2023"
+        target: "#icce2023"
+      - year: "2023"
+        text: "在VRChat发起游戏开发集会（第0次：2023年3月2日）"
+        label: "游戏开发集会"
+        linkKey: "gdm"
+      - year: "2023"
+        text: "开发零界在线（Unity版）并制作官方网站"
+        label: "官方网站"
+        linkKey: "linkai"
+      - year: "2022"
+        text: "开发TikChocoOnline（动漫风异世界奇幻，元宇宙 + 网络游戏）"
+        label: "TikChocoOnline"
+        linkKey: "tikchocoOnline"
+      - year: "2022"
+        text: "大分大学 理工学部 共创理工学科 智能信息系统方向 毕业，升入博士前期课程"
+      - year: "2020"
+        text: "与朋友从零搭建并运营Minecraft服务器，负责运维（2020年9月至2021年8月）"
+      - year: "2019"
+        text: "在C97发行魔法使いユーナ（负责剧本、程序和音乐）"
+        label: "魔法使いユーナ"
+        target: "#yuna"
+      - year: "2018"
+        text: "大学期间的第一款游戏ひよこ村在文化节上公开"
+        label: "ひよこ村"
+        target: "#hiyoko"
+      - year: "2018"
+        text: "高中毕业，进入大分大学 理工学部 共创理工学科 智能信息系统方向"
+      - year: "2016"
+        text: "发布横版射击游戏勇者とモンスター"
+        label: "勇者とモンスター"
+        linkKey: "catalog"
+      - year: "2015"
+        text: "发布射击游戏ドラゴンと勇者"
+        label: "ドラゴンと勇者"
+        linkKey: "catalog"
+      - year: "2015"
+        text: "进入高中"
+      - year: "2014"
+        text: "与朋友一起制作RPG游戏"
+    researchTitle: 研究
+    researchIntro: 我研究P2P、分布式系统和网络虚拟环境，关注如何根据参与者的位置选择连接，以及如何共享位置信息并保持一致性。
+    researchProfile: 研究者资料 / researchmap
+    pubGroups:
+      presentation: 近期报告
+      international: 国际会议论文
+      workshop: 研究会报告
+      domestic: 国内会议录与摘要集
+    pubStatus:
+      self-reported-presented: 已作报告
+      bibliography-verified: 会议录刊载
+      program-verified: 官方日程列载
+    selfNote: 我在SNPD 2026报告了这项研究。
+    presenter: 报告人
+    program: 2025-12-24 / 第7场
+    paperLink: 书目 / DOI
+    programLink: 官方日程
+    motivationLead: 我的梦想是创造一个让每个人都能在异世界幸福生活的未来。
+    motivationBody: 我研究让参与者承担通信和状态共享的机制，也开发通信库和虚拟世界。
+    motivationEnd: 目前我正在研究维持世界运行的机制，包括通信延迟、状态一致性和防止作弊等。
+    moreTitle: 技术讲解和以前做的游戏
+    educationTitle: P2Pのしくみ / P2P的工作原理
+    educationBadge: 技术讲解 / 共同运营
+    educationBody: 我和Nawashiro一起运营这个P2P学习网站。我主要写文章，并用TypeScript实现演示P2P通信过程的模拟，用图解和交互示例向非专业读者解释通信原理。
+    educationLink: 学习P2P的工作原理
+    educationSource: 运营与分工
+    yunaTitle: 魔法使いユーナ
+    yunaDate: 2019-12-31 发布
+    yunaBody: 这是一款用魔法战斗的RPG。我负责剧本、程序和音乐，角色设计由ロロロ负责，宣传由Tucky负责。
+    hiyokoTitle: ひよこ村
+    hiyokoDate: 2018年文化祭公开
+    hiyokoBody: 这是我上大学后做的第一款游戏。2018年在文化祭公开，现在可在BOOTH下载。
+    aboutTitle: fog / 曉霧
+    aboutBody: 我是fog，也叫曉霧。发表研究时使用田中勇気 / Yuki Tanaka这个名字。
+    contactTitle: 个人资料与联系
+    contactBody: 我在GitHub、X和Zenn分享日常开发活动。开源项目的问题或错误报告，请发到对应仓库的Issue。
+    top: 返回顶部
+    play: 开始游戏
+    predecessor: MistNet（旧版）
+    mistnetText: mistlib的前身。用于在Unity虚拟空间中处理通信和对象同步（位置、动画、变量、RPC）的WebRTC库，采用MIT许可。ICCE-Taiwan 2024的论文讨论的就是MistNet。
+    launcher: 下载页（旧Unity版）
+    releases: 发布版本
+    consensusText: 用于P2P网状网络的复制状态机，可信节点之间用Raft，包含不可信节点时用HotStuff。用Rust编写，核心支持原生平台和wasm32，采用MPL-2.0许可，目前是实验性实现，尚未经过安全审计。
+    mistaiText: 用于共享HTTP模型连接和P2P AI房间的TypeScript库，聊天、TTS、STT和OpenAI兼容HTTP隧道共用一个注入的传输层。Preact设置界面可以选用，采用MPL-2.0许可。

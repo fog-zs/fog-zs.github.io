@@ -2,8 +2,8 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 const root=new URL('../',import.meta.url);
-const allowed=new Set(['index.html','en/index.html','zh/index.html','404.html','styles.css','script.js','static/fog.png','static/fog-icon.png','robots.txt','sitemap.xml','data/publications.json',...['publications','projects','affiliations'].flatMap(n=>['','.en','.zh'].map(l=>`data/${n}${l}.csv`))]);
-const types={html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',json:'application/json; charset=utf-8',png:'image/png',txt:'text/plain; charset=utf-8',xml:'application/xml; charset=utf-8',csv:'text/csv; charset=utf-8'};
+const allowed=new Set(['index.html','en/index.html','zh/index.html','404.html','styles.css','script.js','static/fog.png','static/fog-icon.png','static/linkai-online.png','static/mistlib.png','static/mistl.png','static/tc-catalog.svg','static/yuna.jpg','static/hiyoko.jpg','robots.txt','sitemap.xml','data/publications.json',...['publications','projects','affiliations'].flatMap(n=>['','.en','.zh'].map(l=>`data/${n}${l}.csv`))]);
+const types={html:'text/html; charset=utf-8',css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',json:'application/json; charset=utf-8',png:'image/png',svg:'image/svg+xml',jpg:'image/jpeg',txt:'text/plain; charset=utf-8',xml:'application/xml; charset=utf-8',csv:'text/csv; charset=utf-8'};
 createServer(async(req,res)=>{
   try {
     const path=decodeURIComponent(new URL(req.url,'http://127.0.0.1').pathname);

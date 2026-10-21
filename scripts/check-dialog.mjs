@@ -28,11 +28,13 @@ for (const reduced of [false, true]) {
   const body = element('body');
   vm.runInNewContext('//'+code,{HTMLDialogElement:{prototype:{showModal(){}}},document:{documentElement:root,body,querySelectorAll:()=>[details],createElement:element},window:{matchMedia:()=>({matches:reduced})}});
   const dialog=nodes.find(n=>n.tag==='dialog');
-  const trigger=details.row.children[0], close=dialog.children[0].children[1];
+  const trigger=details.row.children[0], scroll=dialog.children[0];
+  assert.equal(dialog.attrs.tabindex,'-1');
+  assert.equal(scroll.children[0].children.length,1,'No visible close button');
   assert.equal(trigger.attrs['aria-controls'],dialog.id);
-  assert.equal(dialog.children[1],content,'Move original static content into dialog');
+  assert.equal(scroll.children[1],content,'Move original static content into dialog');
   trigger.emit('click');
-  assert(dialog.open); assert.equal(active,close);assert(root.classList.contains('modal-open'));
+  assert(dialog.open); assert.equal(active,dialog);assert(root.classList.contains('modal-open'));
   assert.equal(dialog.animations.length,reduced?0:1);
   let prevented=false;
   dialog.emit('cancel',{preventDefault(){prevented=true;}});

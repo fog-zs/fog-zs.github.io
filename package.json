@@ -8,5 +8,10 @@
     "check": "node scripts/check.mjs && node scripts/check-dialog.mjs",
     "preview": "node scripts/serve.mjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "yaml": "^2.9.1"
+  }
 }
